@@ -1,2 +1,7 @@
-# galaxyexamen-final-torres-edgar
-examen final de devops galaxy training
+
+
+```
+curl http://localhost:8080/customers
+```
+
+
