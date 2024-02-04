@@ -2,19 +2,14 @@ pipeline{
 	agent any
 	stages{
 		stage ('Build'){
-			steps{
-				echo "Etapa en no disponible"
-			}
+			agent {
+                    docker { image 'maven:3.6.3-openjdk-11-slim' }
+					echo "Etapa concluida"
+            }
 		}
 		stage ('Tests'){
 			steps{
 				echo "Etapa test no disponible"
-			}
-		}
-		stage ('Deploy'){
-			steps{
-				sh "/usr/bin/docker-compose down -v"
-				sh "/usr/bin/docker-compose up --build -d"
 			}
 		}
 	}
